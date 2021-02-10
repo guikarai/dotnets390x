@@ -25,6 +25,9 @@ You can find below a Dockerfile use to build from an Ubuntu base image a mono en
 * **mono :** There are several components that make up Mono: C# Compiler, Mono runtime, .NET Framework Class Library, Mono Class Library.
 * **nuget :** NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages.
 * **vi :** Editor to open and edit file. Helpful for creating additional c# project if needed.
+
+3 files are copied in the images. These files are C# helloworld like application that can be executed from a
+
 As you can see, we are exposing the port 8080 so that a C# can deliver Web services using this port.
 
 ```
@@ -56,4 +59,21 @@ EXPOSE 8080
 ## 
 ```
 
-## Running the docker container from the built image
+To build the image, run the following command:
+```
+Docker build -f Dockerfile
+```
+
+Once build, to check that the image is OK, run the following command:
+```
+Docker images
+```
+
+
+## Creating and connecting to the docker container
+
+# Simple Helloworld
+
+# Simple Web Helloworld
+
+# Conclusions
