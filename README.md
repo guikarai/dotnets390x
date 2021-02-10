@@ -20,9 +20,13 @@ For the following we will focus on the linux docker experience on s390x.
 
 # Docker container running a dotnet application
 ## Building the docker image
-You can find below a Dockerfile use to build from an Ubuntu base image a mono environment.
 
-## Running the docker container from the built image
+You can find below a Dockerfile use to build from an Ubuntu base image a mono environment plus several other packages:
+* **mono :** There are several components that make up Mono: C# Compiler, Mono runtime, .NET Framework Class Library, Mono Class Library.
+* **nuget :** NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages.
+* **vi :** Editor to open and edit file. Helpful for creating additional c# project if needed.
+As you can see, we are exposing the port 8080 so that a C# can deliver Web services using this port.
+
 ```
 FROM ubuntu:20.04
 ENV MONO_VERSION 6.10.0.104
@@ -51,3 +55,5 @@ WORKDIR /root
 EXPOSE 8080
 ## 
 ```
+
+## Running the docker container from the built image
