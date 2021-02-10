@@ -31,8 +31,10 @@ You can find below a Dockerfile use to build from an Ubuntu base image a mono en
 As you can see, we are exposing the port 8080 so that a C# can deliver Web services using this port.
 
 ```
-FROM ubuntu:20.04
+FROM ubuntu:18.04
+
 ENV MONO_VERSION 6.10.0.104
+RUN DEBIAN_FRONTEND=noninteractive
 RUN apt-get update 
 RUN apt-get install -y --no-install-recommends gnupg dirmngr ca-certificates
 RUN  rm -rf /var/lib/apt/lists/* \
@@ -45,7 +47,7 @@ RUN  gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328
   && apt-get purge -y --auto-remove gnupg dirmngr
 RUN echo "deb https://download.mono-project.com/repo/ubuntu stable-focal/snapshots/$MONO_VERSION main" > /etc/apt/sources.list.d/mono-official-stable.list \
   && apt-get update \
-  && apt-get install -y mono-runtime mono-devel \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y mono-runtime mono-devel \
   && apt-get install -y vim \
   && apt-get install -y nuget \
   && nuget update -self
@@ -56,7 +58,6 @@ RUN mcs /root/helloworld/helloform.cs
 RUN mcs /root/helloworld/helloweb.cs
 WORKDIR /root
 EXPOSE 8080
-## 
 ```
 
 To build the image, run the following command:
