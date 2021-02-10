@@ -70,8 +70,31 @@ Once build, to check that the image is OK, run the following command:
 Docker images
 ```
 
-
 ## Creating and connecting to the docker container
+
+To create a docker container from the just built image, please issue the following command:
+
+
+To check that the container is running, please issue the following command:
+```
+root@ub20dpp:~# docker ps
+CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS               NAMES
+952993dc07ea        s390x/ubuntu:18.04      "bash"                   About an hour ago   Up About an hour                        optimistic_sutherland
+```
+
+To connect in the deployed container, please issue the following command:
+```
+root@ub20dpp:~# docker exec -ti 952993dc07ea /bin/bash
+root@952993dc07ea:/#
+```
+
+Once connected, you can check that the environment is properly set. 
+To do so, issue the following command to inspect the Mono configuration:
+
+```
+```
+
+Now let's inspect, build and run some simple C# application from there.
 
 # Simple Helloworld
 
