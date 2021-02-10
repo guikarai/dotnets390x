@@ -23,7 +23,7 @@ For the following we will focus on the linux docker experience on s390x.
 
 You can find below a Dockerfile use to build from an Ubuntu base image a mono environment plus several other packages:
 * **mono :** There are several components that make up Mono: C# Compiler, Mono runtime, .NET Framework Class Library, Mono Class Library.
-* **nuget :** NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages.
+* **nuget :** [NuGet](https://www.nuget.org/) is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages.
 * **vi :** Editor to open and edit file. Helpful for creating additional c# project if needed.
 
 3 files are copied in the images. These files are C# helloworld like application that can be executed from a
