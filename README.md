@@ -142,7 +142,7 @@ Edit the file hello.cs using the vi command below. Feel free to edit text to be 
 vi hello.cs
 ```
 
-Content to look like the following:
+Content to looks like the following:
 ```
 using System;
 
@@ -180,7 +180,7 @@ Still in the current directory, please edit the file named helloweb.cs with the 
 ```
 vi helloweb.cs
 ```
-Content to look like the following:
+Content to looks like the following:
 ```
 using System;
 using System.Collections.Generic;
@@ -308,6 +308,29 @@ As we did before, to use the executable binary, please issue the following comma
 mono helloweb.exe
 ```
 
-
+Opening another terminal in the docker container or from the docker host, you can test if the web application works issuing the following command:
+```
+curl -v http://localhost:8080/hello/
+```
+Output to looks like the following:
+```
+*   Trying 127.0.0.1:8080...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /hello/ HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.68.0
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: Mono-HTTPAPI/1.0
+< Date: Thu, 11 Feb 2021 15:26:47 GMT
+< Content-Length: 70
+< Keep-Alive: timeout=15,max=100
+< 
+* Connection #0 to host localhost left intact
+<HTML><BODY>Hello World, the time is 02/11/2021 15:26:47</BODY></HTML>root@c6e811baad63:/#
+```
 
 # Conclusions
