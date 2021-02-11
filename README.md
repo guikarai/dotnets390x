@@ -4,6 +4,11 @@ Thanks to Mono work there is an opportunity to run some C# application on linux 
 Mono is the open source development platform based on the .NET Framework. It allows developers to build cross-platform applications with improved developer productivity. Mono’s .NET implementation is based on the ECMA standards for C# and the Common Language Infrastructure.
 More information about [Mono](https://www.mono-project.com/docs/about-mono/).
 
+Mono-develop is a complete IDE offering nice editing capabilities. The Mono-develop IDE is also very intuitive. If you’re ok with Visual Studio, working with Mono-develop is as well as simple too. The chart below shows utilities to build and run .NET programs according the targeted version:
+|**Tools**|**.NET Framework**|**.NET Core**|**Mono**|
+|**Build/Compile**|csc|dotnet build|mcs|
+|**Run**|cs|dotnet|mono|
+
 The following is about describing how to run simple C# application on s390x environment.
 
 # Requirements
