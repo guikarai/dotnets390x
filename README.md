@@ -4,6 +4,17 @@ Thanks to Mono work there is an opportunity to run some C# application on linux 
 Mono is the open source development platform based on the .NET Framework. It allows developers to build cross-platform applications with improved developer productivity. Mono’s .NET implementation is based on the ECMA standards for C# and the Common Language Infrastructure.
 More information about [Mono](https://www.mono-project.com/docs/about-mono/).
 
+Mono offers some interesting features:
+– **Binary compatibility:** you can import CLR compliant executables or libraries, just add them as a reference into your Mono project and directly use them without any modifications and vice-versa. This is possible because Mono was built on the implementation of the ECMA’s Common Language Infrastructure.
+– **Microsoft Compatible API:** major .NET Framework components (ASP.NET, ADO.NET, Windows Forms) can run without recompilation.
+– **C# from 1.0 to 5.0 full feature-complete** ( full support of Linq, dynamic,…).
+
+However, there are some compatibility limitations which are:
+– Windows Presentation Foundation (WPF), Windows Workflow Foundation (WWF) are not supported at all.
+– Limited supports on Windows Communication Foundation (WCF).
+– Limited supports on Asp.net 4.5 async task.
+– MVC4 or MVC5, some features aren’t working yet.
+
 Mono-develop is a complete IDE offering nice editing capabilities. The Mono-develop IDE is also very intuitive. If you’re ok with Visual Studio, working with Mono-develop is as well as simple too. The chart below shows utilities to build and run .NET programs according the targeted version:
 
 |**Tools**|**.NET Framework**|**.NET Core**|**Mono**|
