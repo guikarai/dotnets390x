@@ -175,7 +175,7 @@ As you can see, the very simple C# application works. It displays the sentense "
 Now, let's push higher the bar with an hello world web-app.
 
 # Simple Web Helloworld
-Now lest work on a C# webapp helloworld application.
+Now lets work on a C# webapp helloworld application.
 Still in the current directory, please edit the file named helloweb.cs with the following command:
 ```
 vi helloweb.cs
