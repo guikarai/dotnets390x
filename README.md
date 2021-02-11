@@ -37,8 +37,8 @@ Mono supports the s390x architecture, and runs as well natively on:
 
 Alternatively, Mono supports the docker architecture and can run in Linux Docker container. This opening oportunity to run it on:
 * z/OS Container Extension (zCX)
-* Linux on IBM Z
-* Linux on LinuxONE
+* Linux on IBM Z docker host
+* Linux on LinuxONE docker host
 
 For the following we will focus on the linux docker experience on s390x.
 
