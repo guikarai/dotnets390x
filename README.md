@@ -7,6 +7,7 @@ More information about [Mono](https://www.mono-project.com/docs/about-mono/).
 Mono-develop is a complete IDE offering nice editing capabilities. The Mono-develop IDE is also very intuitive. If you’re ok with Visual Studio, working with Mono-develop is as well as simple too. The chart below shows utilities to build and run .NET programs according the targeted version:
 
 |**Tools**|**.NET Framework**|**.NET Core**|**Mono**|
+|---|---|---|--|
 |**Build/Compile**|csc|dotnet build|mcs|
 |**Run**|cs|dotnet|mono|
 
