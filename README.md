@@ -142,7 +142,7 @@ Edit the file hello.cs using the vi command below. Feel free to edit text to be 
 vi hello.cs
 ```
 
-Content to looks like the following:
+Content looks like the following:
 ```
 using System;
 
@@ -180,7 +180,7 @@ Still in the current directory, please edit the file named helloweb.cs with the 
 ```
 vi helloweb.cs
 ```
-Content to looks like the following:
+Content looks like the following:
 ```
 using System;
 using System.Collections.Generic;
@@ -289,7 +289,7 @@ namespace WebServer
  
       private static void Main(string[] args)
       {
-         var ws = new WebServer(SendResponse, "http://localhost:8080/hello/");
+         var ws = new WebServer(SendResponse, "http://*:8080/hello/");
          ws.Run();
          Console.WriteLine("Hello World");
          Console.ReadKey();
@@ -312,7 +312,7 @@ Opening another terminal in the docker container or from the docker host, you ca
 ```
 curl -v http://localhost:8080/hello/
 ```
-Output to looks like the following:
+Output looks like the following:
 ```
 *   Trying 127.0.0.1:8080...
 * TCP_NODELAY set
