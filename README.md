@@ -96,19 +96,21 @@ docker images
 
 ## Creating and connecting to the docker container
 
-To create a docker container from the docker image you just built, issue the following command:
+To create a docker container from the docker image you just built, issue the following command on the docker host:
 ```
 docker run -it --name <container_name> -p 8080:8080 <image_name>  bash
 ```
+You should now be running bash in the container.
 
-To check that the container is running, please issue the following command:
+
+To check that the container is running, please issue the following command on the docker host:
 ```
 docker ps
 CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS               NAMES
 c6e811baad63        mono-nuget-s390x:6.10   "/bin/bash"              2 weeks ago         Up 3 days                               <container_name>
 ```
 
-To connect in the deployed container, please issue the following command:
+To reconnect to an existing running container, please issue the following command on the docker host:
 ```
 docker exec -ti <container_name> /bin/bash
 root@952993dc07ea:/#
@@ -182,7 +184,7 @@ Still in the current directory, please edit the file named helloweb.cs with the 
 ```
 vi helloweb.cs
 ```
-If you want a look at the file content, please check [src/helloweb.cs](../blob/master/src/helloweb.cs).
+If you want a look at the file content, please check [src/helloweb.cs](../master/src/helloweb.cs).
 This C# helloworld webapp responds "Hello World" when receiving an HTTP GET /hello request on its listening port 8080.
 To build this application, and to generate the executable binary, please issue the following command:
 ```
